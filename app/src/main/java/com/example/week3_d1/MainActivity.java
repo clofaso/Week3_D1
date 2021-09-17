@@ -19,7 +19,10 @@ TextView mTextView;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent recInt = getIntent();
+
         mTextView = (TextView)findViewById(R.id.tv1);
+        mTextView.setText(""+recInt.getIntExtra("THESUM",0));
         mTextView.setOnClickListener(view -> {
             ((TextView)view).setTextSize(20+i++);
         });

@@ -2,6 +2,7 @@ package com.example.week3_d1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -24,11 +25,15 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void calculate_sum(View view) {
-
-        mTextView.setText(""+(
+        int sm = (
                 Integer.parseInt(mEditText1.getText().toString()) +
                         Integer.parseInt(mEditText2.getText().toString())
-                ));
+        );
+        mTextView.setText(""+sm);
+
+        Intent n = new Intent(this, MainActivity.class);
+        n.putExtra("THESUM",sm);
+        startActivity(n);
 
     }
 }
