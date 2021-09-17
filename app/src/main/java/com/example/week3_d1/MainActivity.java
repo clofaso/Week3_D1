@@ -37,17 +37,15 @@ TextView mTextView;
         sb.show();
     }
 
-//    class MyLstnr implements View.OnClickListener{
-//
-//        @Override
-//        public void onClick(View view) {
+    class MyLstnr implements View.OnClickListener{
 
-//            Toast.makeText(MainActivity.this, "Christine was here", Toast.LENGTH_LONG).show();
-
-//            Snackbar sb = Snackbar.make(view,"C.LoFaso was here", Snackbar.LENGTH_LONG);
-//            sb.show();
-//        }
-//    }
+        @Override
+        public void onClick(View view) {
+            findViewById(R.id.btn3).setOnClickListener(view1 -> {
+                mTextView.setText("Hello Christine");
+            });
+        }
+    }
 
     @Override
     protected void onStart() {
